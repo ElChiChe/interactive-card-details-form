@@ -19,6 +19,8 @@
 
 <div class="banner">
 
+  <!--card back data-->
+
   <img class="card-back-image" src="images/bg-card-back.png" alt="card-back">
   <span class="card-cve-image">000</span>
 
@@ -38,14 +40,6 @@
 </div>
 
 
-<div class="back-card-data">
-  
-  <span class="card-cve">000</span>
-
-
-</div>  
-
-
 <div class="data-card-form">
   
   <span class="form-name">Cardholder Name</span>
@@ -54,15 +48,27 @@
   <span class="form-card-number">Card Number</span>
   <input type="number" placeholder="e.g. 1234 5678 9123 0000">
 
-  <span class="form-expiration">Exp. Date (MM/YY)</span>
-  <input type="number" placeholder="MM">
-  <input type="number" placeholder="YY">
+<div class="expiration-data-div">
+  
+  <div class="expiration-text">
+    
+    <span class="form-expiration">Exp. Date (MM/YY)</span>
+    <span class="form-cve">CVC</span>
+  
+  </div>
 
-  <span class="form-cve">CVC</span>
-  <input type="number" placeholder="e.g. 123">
+  <div class="expiration-form">
+    
+    <input type="number" placeholder="MM">
+    <input type="number" placeholder="YY">
+    <input type="number" placeholder="e.g. 123">
+  
+  </div>
+
+
+</div>
 
   <button class="btn-confirm">Confirm</button>
-
 </div>  
 
   <!-- Completed state start -->
