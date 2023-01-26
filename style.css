@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+@media (max-width: 375px) {
+	body {
+		background: lightblue;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: "Space Grotesk", sans-serif;
+	}
+
+	.banner {
+		display: flex;
+		width: 100%;
+		height: 15rem;
+		justify-content: center;
+		align-items: center;
+		background-image: url(images/bg-main-mobile.png);
+		background-position: center;
+	}
+
+	.card-back-image {
+		width: 300px;
+		position: relative;
+		height: 10rem;
+		left: 30px;
+		bottom: 12px;
+	}
+
+	.card-cve-image {
+		position: relative;
+		right: 30px;
+		bottom: 14px;
+		font-size: 10px;
+		color: hsl(0, 0%, 100%);
+	}
+
+	.front-card-data {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-image: url(images/bg-card-front.png);
+		width: 300px;
+		height: 11rem;
+		border-radius: 10px;
+		position: relative;
+		bottom: 7.6rem;
+		left: 15px;
+	}
+
+	.card-logo {
+		position: relative;
+		right: 30%;
+		bottom: 17%;
+		width: 22%;
+	}
+
+	.card-numbers-div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 88%;
+		position: relative;
+		top: 10px;
+	}
+
+	.card-numbers {
+		font-size: 18px;
+		color: hsl(0, 0%, 100%);
+		letter-spacing: 2.2px;
+	}
+
+	.card-data-div {
+		width: 90%;
+		position: relative;
+		top: 30px;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		color: hsl(0, 0%, 100%);
+		font-size: 12px;
+		letter-spacing: 1px;
+	}
+
+	.card-name {
+		position: relative;
+		right: 15px;
+	}
+	.card-expiration {
+		position: relative;
+		left: 15px;
+	}
+}
