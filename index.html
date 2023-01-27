@@ -34,7 +34,13 @@
   </div>
   <div class="card-data-div">
     <span class="card-name">Jane Appleseed</span>
-    <span class="card-expiration">00/00</span>
+    
+    <div class="card-expiration-div">
+      
+    <span class="card-month">00</span>
+    /
+    <span class="card-year">00</span>
+    </div>
   </div>
 
 </div>
@@ -44,9 +50,11 @@
   
   <span>Cardholder Name</span>
   <input class="form-name-input" type="text" placeholder="e.g. Jane Appleseed">
+  <p class="error-form-name">Wrong format, letters only</p>
 
   <span>Card Number</span>
   <input class="form-numbercard-input" type="text" placeholder="e.g. 1234 5678 9123 0000">
+  <p class="error-form-numcard">Wrong format, numbers only</p>
 
 <div class="expiration-data-div">
   
@@ -65,17 +73,24 @@
   
   </div>
 
+  <div class="error-form-expiration-div">
+    <p class="error-form-expiration">Can't be blank</p>
+    <p class="error-form-cvc">Can't be blank</p>
+  </div>
 
 </div>
 
   <button class="btn-confirm">Confirm</button>
 </div>  
 
-  <!-- Completed state start -->
+<div class="form-completed">
+  
+  <img src="images/icon-complete.svg" alt="">
 
-  <!--Thank you!
-  We've added your card details
-  Continue/-->
+  <h2 class="completed-h2">Thank you!</h2>
+  <p class="completed-p">We've added your card details</p>
+  <button class="btn-completed">Continue</button>
+</div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

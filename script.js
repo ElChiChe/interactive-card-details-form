@@ -2,8 +2,18 @@
 const front_card_name = document.querySelector(".card-name");
 const front_card_numbers = document.querySelector(".card-numbers");
 const front_card_expiration = document.querySelector(".card-expiration");
+const front_card_month = document.querySelector(".card-month");
+const front_card_year = document.querySelector(".card-year");
 
 const card_back_cvc_span = document.querySelector(".card-cvc-image");
+
+
+//ERROR MESSAGE
+const error_form_name = document.querySelector(".error-form-name");
+const error_form_numcard = document.querySelector(".error-form-numcard");
+
+const error_form_expiration = document.querySelector(".error-form-expiration");
+const error_form_cvc = document.querySelector(".error-form-cvc");
 
 
 //BUTTON CONFIRM
@@ -16,36 +26,73 @@ const form_mm_input = document.querySelector(".form-mm-input");
 const form_yy_input = document.querySelector(".form-yy-input");
 const form_cvc_input = document.querySelector(".form-cvc-input");
 
-const getDataFromInputs = (name, numcard, mm, yy, cvc) => {
-	let name_input = name.value;
-	let numcard_input = numcard.value;
-	let mm_input = mm.value;
-	let yy_input = yy.value;
-	let cvc_input = cvc.value;
-
-	form_name_input.value = "";
-	form_numcard_input.value = "";
-	form_mm_input.value = "";
-	form_yy_input.value = "";
-	form_cvc_input.value = "";
-
-	printDataCard(name_input, numcard_input, mm_input, yy_input, cvc_input);
+const format = s => {
+	return s.replace(/\d{4}/g, "$&");
 }
 
-const printDataCard = (name, numcard, mm, yy, cvc) => {
-	front_card_name.textContent = name;
-	front_card_numbers.textContent = numcard;
-	front_card_expiration.textContent = `${mm}/${yy}`;
-	card_back_cvc_span.textContent = cvc;
+const setCardName = e => {
+	front_card_name.textContent = e.target.value;
+}
+
+const setCardNumbers = e => {
+	front_card_numbers.textContent = format(e.target.value);
+}
+
+const setCardMonth = e => {
+	front_card_month.textContent = e.target.value;
+}
+
+const setCardYear = e => {
+	front_card_year.textContent = e.target.value;
+}
+
+const setCardBackCvc = e => {
+	card_back_cvc_span.textContent = e.target.value;
+}
+
+const confirmData = () => {
+	if(!form_name_input.value) {
+		error_form_name.style.display = "block";		
+	}
+	else {
+		error_form_name.style.display = "none";
+	}
+
+	if(!form_numcard_input.value) {
+		error_form_numcard.style.display = "block";		
+	}
+	else {
+		error_form_numcard.style.display = "none";
+	}
+
+	if(!form_mm_input.value) {
+		error_form_expiration.style.display = "block";		
+	}
+	else {
+		error_form_expiration.style.display = "none";
+	}
+
+	if(!form_yy_input.value) {
+		error_form_expiration.style.display = "block";		
+	}
+	else {
+		error_form_expiration.style.display = "none";
+	}
 
 
+	if(!form_cvc_input.value) {
+		error_form_cvc.style.display = "block";		
+	}
+	else {
+		error_form_cvc.style.display = "none";
+	}
 }
 
 
-//AGREGAR CONDICIONALES PARA VERIFICAR LOS CAMPOS DE LOS INPUTS, COLOCAR EL
-//FORMATO CORRECTAMENTE PARA QUE NO SE PUEDA COLAPSAR EL DISEÑO NI LOS DATOS
-//INGRESADOSPOR EXCESO DE INFORMACIÓN.
+form_name_input.addEventListener("keyup", setCardName);
+form_numcard_input.addEventListener("keyup", setCardNumbers);
+form_mm_input.addEventListener("keyup", setCardMonth);
+form_yy_input.addEventListener("keyup", setCardYear);
+form_cvc_input.addEventListener("keyup", setCardBackCvc);
 
-btn_confirm.addEventListener("click", () => {
-	getDataFromInputs(form_name_input, form_numcard_input, form_mm_input, form_yy_input, form_cvc_input)
-})
+btn_confirm.addEventListener("click", confirmData);

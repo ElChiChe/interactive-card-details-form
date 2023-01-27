@@ -28,16 +28,18 @@
 		width: 300px;
 		position: relative;
 		height: 10rem;
-		left: 30px;
+		left: 75px;
 		bottom: 12px;
 	}
 
 	.card-cvc-image {
 		position: relative;
-		right: 30px;
+		right: 60px;
 		bottom: 14px;
 		font-size: 10px;
 		color: hsl(0, 0%, 100%);
+		min-width: 100px;
+		text-align: right;
 	}
 
 	.front-card-data {
@@ -191,5 +193,90 @@
 		font-weight: 700;
 		position: relative;
 		top: 3px;
+		font-family: "Space Grotesk", sans-serif;
 	}
+
+
+	/*ERROR DATA STYLE*/
+
+	.error-form-name {
+		position: relative;
+		bottom: 18px;
+		font-size: 10px;
+		color: hsl(0, 100%, 66%);
+		display: none;
+	}
+
+	.error-form-numcard {
+		font-size: 10px;
+		position: relative;
+		bottom: 18px;
+		color: hsl(0, 100%, 66%);
+		display: none;
+	}
+
+	.error-form-expiration-div {
+		width: 82%;
+		height: 25px;
+		display: flex;
+		align-items: center;
+	}
+
+	.error-form-expiration-div > p {
+		font-size: 10px;
+		color: hsl(0, 100%, 66%);
+		display: none;
+	}
+
+	.error-form-expiration-div > p:nth-child(2) {
+		position: relative;
+		left: 36%;
+	}
+
+	.card-expiration-div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.form-completed {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		bottom: 4rem;
+		display: none;
+	}
+
+	.form-completed > img {
+		width: 100px;
+	}
+
+	.completed-h2 {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 500;
+		font-size: 32px;
+		color: hsl(278, 68%, 11%);
+	}
+
+	.completed-p {
+		font-size: 18px;
+		color: hsl(279, 6%, 55%);
+		position: relative;
+		bottom: 25px;
+	}
+
+	.btn-completed {
+		width: 90%;
+		height: 3.5rem;
+		border: none;
+		background: hsl(278, 68%, 11%);
+		border-radius: 12px;
+		color: hsl(0, 0%, 100%);
+		font-size: 18px;
+		font-family: "Space Grotesk", sans-serif;
+	}
+
 }
