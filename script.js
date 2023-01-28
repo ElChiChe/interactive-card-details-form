@@ -8,6 +8,15 @@ const front_card_year = document.querySelector(".card-year");
 const card_back_cvc_span = document.querySelector(".card-cvc-image");
 
 
+//DATA CARD FORM PARENT
+const data_card_form = document.querySelector(".data-card-form");
+
+
+//COMPLETED MESSAGE
+const form_completed = document.querySelector(".form-completed");
+const btn_completed = document.querySelector(".btn-completed");
+
+
 //ERROR MESSAGE
 const error_form_name = document.querySelector(".error-form-name");
 const error_form_numcard = document.querySelector(".error-form-numcard");
@@ -26,9 +35,6 @@ const form_mm_input = document.querySelector(".form-mm-input");
 const form_yy_input = document.querySelector(".form-yy-input");
 const form_cvc_input = document.querySelector(".form-cvc-input");
 
-const format = s => {
-	return s.replace(/\d{4}/g, "$&");
-}
 
 const setCardName = e => {
 	front_card_name.textContent = e.target.value;
@@ -86,13 +92,30 @@ const confirmData = () => {
 	else {
 		error_form_cvc.style.display = "none";
 	}
+
+	if(form_name_input.value && form_numcard_input.value &&
+	form_mm_input.value && form_yy_input.value && form_cvc_input.value) {
+		data_card_form.style.display = "none";
+		form_completed.style.display = "flex"
+	}
+
 }
 
 
-form_name_input.addEventListener("keyup", setCardName);
-form_numcard_input.addEventListener("keyup", setCardNumbers);
-form_mm_input.addEventListener("keyup", setCardMonth);
-form_yy_input.addEventListener("keyup", setCardYear);
-form_cvc_input.addEventListener("keyup", setCardBackCvc);
+const format = s => {
+	return s.toString().replace(/\d{4}/g, "$&");
+}
+
+const resetForm = () => {
+	window.location.reload();
+}
+
+
+form_name_input.addEventListener("input", setCardName);
+form_numcard_input.addEventListener("input", setCardNumbers);
+form_mm_input.addEventListener("input", setCardMonth);
+form_yy_input.addEventListener("input", setCardYear);
+form_cvc_input.addEventListener("input", setCardBackCvc);
 
 btn_confirm.addEventListener("click", confirmData);
+btn_completed.addEventListener("click", resetForm);
