@@ -4,7 +4,7 @@
 	--placeholder-color: hsl(279, 6%, 55%);
 }
 
-@media (max-width: 375px) {
+@media (min-width: 375px) {
 	body {
 		background: lightblue;
 		margin: 0;
@@ -80,7 +80,7 @@
 	}
 
 	.card-data-div {
-		width: 90%;
+		width: 85%;
 		position: relative;
 		top: 30px;
 		display: flex;
@@ -281,4 +281,581 @@
 		font-family: "Space Grotesk", sans-serif;
 	}
 
+}
+
+
+@media (min-width: 768px) {
+	body {
+		background: lightblue;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: "Space Grotesk", sans-serif;
+		background: hsl(0, 0%, 100%);
+	}
+
+	.banner {
+		display: flex;
+		width: 100%;
+		height: 15rem;
+		justify-content: center;
+		align-items: center;
+		background-image: url(images/bg-main-mobile.png);
+		background-position: center;
+	}
+
+	.card-back-image {
+		width: 300px;
+		position: relative;
+		height: 10rem;
+		left: 75px;
+		bottom: 12px;
+	}
+
+	.card-cvc-image {
+		position: relative;
+		right: 60px;
+		bottom: 14px;
+		font-size: 10px;
+		color: hsl(0, 0%, 100%);
+		min-width: 100px;
+		text-align: right;
+	}
+
+	.front-card-data {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-image: url(images/bg-card-front.png);
+		width: 300px;
+		height: 11rem;
+		border-radius: 10px;
+		position: relative;
+		bottom: 7.6rem;
+		left: 26%;
+	}
+
+	.card-logo {
+		position: relative;
+		right: 30%;
+		bottom: 17%;
+		width: 22%;
+	}
+
+	.card-numbers-div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 88%;
+		position: relative;
+		top: 10px;
+	}
+
+	.card-numbers {
+		font-size: 18px;
+		color: hsl(0, 0%, 100%);
+		letter-spacing: 2.2px;
+	}
+
+	.card-data-div {
+		width: 85%;
+		position: relative;
+		top: 30px;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		color: hsl(0, 0%, 100%);
+		font-size: 12px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	.card-name {
+		position: relative;
+		width: 75%;
+		text-align: left;
+	}
+	.card-expiration {
+		position: relative;
+		left: 15px;
+	}
+
+	/*FORM DATA STYLES*/
+
+	.data-card-form {
+		position: relative;
+		bottom: 60px;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-start;
+		flex-direction: column;
+		margin: 0 20px;
+		height: 25rem;
+	}
+
+	.data-card-form > span {
+		font-size: 16px;
+		text-transform: uppercase;
+		color: hsl(278, 68%, 11%);
+	}
+
+	.data-card-form > input {
+		width: 90%;
+		height: 2rem;
+		padding: 10px;
+		border: none;
+		border-radius: 12px;
+		border: var(--placeholder-color);
+		border: 1px solid var(--placeholder-color);
+		margin-bottom: 10px;
+		outline: none;
+	}
+
+	.data-card-form > input::placeholder {
+		color: var(--placeholder-color);
+	}
+
+	.expiration-data-div {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		width: 100%;
+		height: 20%;
+	}
+
+	.expiration-text {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 90%;
+		position: relative;
+		bottom: 10px;
+	}
+
+	.expiration-text > span:nth-child(2) {
+		position: relative;
+		left: 25px;
+	}
+
+	.expiration-form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 97%;
+		height: 100%;
+	}
+
+	.expiration-form > input {
+		width: 40%;
+		height: 55%;
+		margin: 3px;
+		border: none;
+		border-radius: 12px;
+		padding: 10px;
+		border: 1px solid var(--placeholder-color);
+		outline: none;
+	}
+
+	.expiration-form > input:nth-child(3) {
+		width: 100%;
+	}
+
+	.btn-confirm {
+		width: 100%;
+		height: 15%;
+		border: none;
+		border-radius: 12px;
+		background: hsl(278, 68%, 11%);
+		color: hsl(0, 0%, 100%);
+		font-size: 18px;
+		font-weight: 700;
+		position: relative;
+		top: 3px;
+		font-family: "Space Grotesk", sans-serif;
+	}
+
+
+	/*ERROR DATA STYLE*/
+
+	.error-form-name {
+		position: relative;
+		bottom: 18px;
+		font-size: 10px;
+		color: hsl(0, 100%, 66%);
+		display: none;
+	}
+
+	.error-form-numcard {
+		font-size: 10px;
+		position: relative;
+		bottom: 18px;
+		color: hsl(0, 100%, 66%);
+		display: none;
+	}
+
+	.error-form-expiration-div {
+		width: 82%;
+		height: 25px;
+		display: flex;
+		align-items: center;
+	}
+
+	.error-form-expiration-div > p {
+		font-size: 10px;
+		color: hsl(0, 100%, 66%);
+		display: none;
+	}
+
+	.error-form-expiration-div > p:nth-child(2) {
+		position: relative;
+		left: 36%;
+	}
+
+	.card-expiration-div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 20%;
+	}
+
+	.form-completed {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		bottom: 4rem;
+		display: none;
+	}
+
+	.form-completed > img {
+		width: 100px;
+	}
+
+	.completed-h2 {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 500;
+		font-size: 32px;
+		color: hsl(278, 68%, 11%);
+	}
+
+	.completed-p {
+		font-size: 18px;
+		color: hsl(279, 6%, 55%);
+		position: relative;
+		bottom: 25px;
+	}
+
+	.btn-completed {
+		width: 90%;
+		height: 3.5rem;
+		border: none;
+		background: hsl(278, 68%, 11%);
+		border-radius: 12px;
+		color: hsl(0, 0%, 100%);
+		font-size: 18px;
+		font-family: "Space Grotesk", sans-serif;
+	}
+}
+
+@media (min-width: 1366px) {
+	body {
+		background: lightblue;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: "Space Grotesk", sans-serif;
+		background: hsl(0, 0%, 100%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100vh;
+	}
+
+	.banner {
+		display: flex;
+		max-width: 35%;
+		height: 100%;
+		position: relative;
+		right: 21%;
+		justify-content: center;
+		align-items: center;
+		background-image: url(images/bg-main-mobile.png);
+		background-position: center;
+		background-size: cover;
+	}
+
+	.resize-banner {
+		right: 26%;
+	}
+
+	.card-back-image {
+		width: 300px;
+		position: relative;
+		height: 10rem;
+		left: 67%;
+		top: 13%;
+	}
+
+	.card-cvc-image {
+		position: relative;
+		top: 12.7%;
+		left: 33%;
+		font-size: 10px;
+		color: hsl(0, 0%, 100%);
+		min-width: 100px;
+		text-align: right;
+	}
+
+	.front-card-data {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: absolute;
+		top: 20%;
+		left: 15%;
+		background-image: url(images/bg-card-front.png);
+		width: 320px;
+		height: 11rem;
+		border-radius: 10px;
+	}
+
+	.card-logo {
+		position: relative;
+		right: 30%;
+		bottom: 17%;
+		width: 22%;
+	}
+
+	.card-numbers-div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 88%;
+		position: relative;
+		top: 10px;
+	}
+
+	.card-numbers {
+		font-size: 18px;
+		color: hsl(0, 0%, 100%);
+		letter-spacing: 2.2px;
+	}
+
+	.card-data-div {
+		width: 85%;
+		position: relative;
+		top: 30px;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		color: hsl(0, 0%, 100%);
+		font-size: 12px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	.card-name {
+		position: relative;
+		width: 75%;
+		text-align: left;
+	}
+	.card-expiration {
+		position: relative;
+		left: 15px;
+	}
+
+	/*FORM DATA STYLES*/
+
+	.data-card-form {
+		position: relative;
+		top: 10px;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-start;
+		flex-direction: column;
+		margin: 0 20px;
+		height: 55%;
+		width: 25%;
+	}
+
+	.data-card-form > span {
+		font-size: 12px;
+		text-transform: uppercase;
+		color: hsl(278, 68%, 11%);
+	}
+
+	.data-card-form > input {
+		width: 90%;
+		height: 1rem;
+		padding: 10px;
+		border: none;
+		border-radius: 10px;
+		border: var(--placeholder-color);
+		border: 1px solid var(--placeholder-color);
+		margin-bottom: 10px;
+		outline: none;
+	}
+
+	.data-card-form > input::placeholder {
+		color: var(--placeholder-color);
+	}
+
+	.expiration-data-div {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		width: 100%;
+		height: 20%;
+	}
+
+	.expiration-text {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 90%;
+		position: relative;
+		bottom: 10px;
+		font-size: 12px;
+	}
+
+	.expiration-text > span:nth-child(2) {
+		position: relative;
+		left: 65px;
+	}
+
+	.expiration-form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 97%;
+		height: 100%;
+	}
+
+	.expiration-form > input {
+		width: 40%;
+		height: 1rem;
+		margin: 3px;
+		border: none;
+		border-radius: 12px;
+		padding: 10px;
+		border: 1px solid var(--placeholder-color);
+		outline: none;
+	}
+
+	.expiration-form > input:nth-child(3) {
+		width: 100%;
+	}
+
+	.btn-confirm {
+		width: 100%;
+		height: 12%;
+		border: none;
+		border-radius: 12px;
+		background: hsl(278, 68%, 11%);
+		color: hsl(0, 0%, 100%);
+		font-size: 18px;
+		font-weight: 700;
+		position: relative;
+		top: 3px;
+		font-family: "Space Grotesk", sans-serif;
+	}
+
+
+	/*ERROR DATA STYLE*/
+
+	.error-form-name {
+		position: relative;
+		bottom: 18px;
+		font-size: 10px;
+		color: hsl(0, 100%, 66%);
+		display: none;
+	}
+
+	.error-form-numcard {
+		font-size: 10px;
+		position: relative;
+		bottom: 18px;
+		color: hsl(0, 100%, 66%);
+		display: none;
+	}
+
+	.error-form-expiration-div {
+		width: 82%;
+		height: 25px;
+		display: flex;
+		align-items: center;
+	}
+
+	.error-form-expiration-div > p {
+		font-size: 10px;
+		color: hsl(0, 100%, 66%);
+		display: none;
+	}
+
+	.error-form-expiration-div > p:nth-child(2) {
+		position: relative;
+		left: 36%;
+	}
+
+	.card-expiration-div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 20%;
+	}
+
+	.form-completed {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		bottom: 4rem;
+		display: none;
+	}
+
+	.form-completed > img {
+		width: 100px;
+	}
+
+	.completed-h2 {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 500;
+		font-size: 32px;
+		color: hsl(278, 68%, 11%);
+	}
+
+	.completed-p {
+		font-size: 18px;
+		color: hsl(279, 6%, 55%);
+		position: relative;
+		bottom: 25px;
+	}
+
+	.btn-completed {
+		width: 90%;
+		height: 3.5rem;
+		border: none;
+		background: hsl(278, 68%, 11%);
+		border-radius: 12px;
+		color: hsl(0, 0%, 100%);
+		font-size: 18px;
+		font-family: "Space Grotesk", sans-serif;
+	}
+
+	.attribution {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+	}
 }

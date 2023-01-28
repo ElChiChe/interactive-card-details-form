@@ -7,6 +7,7 @@ const front_card_year = document.querySelector(".card-year");
 
 const card_back_cvc_span = document.querySelector(".card-cvc-image");
 
+const banner = document.querySelector(".banner");
 
 //DATA CARD FORM PARENT
 const data_card_form = document.querySelector(".data-card-form");
@@ -96,7 +97,8 @@ const confirmData = () => {
 	if(form_name_input.value && form_numcard_input.value &&
 	form_mm_input.value && form_yy_input.value && form_cvc_input.value) {
 		data_card_form.style.display = "none";
-		form_completed.style.display = "flex"
+		form_completed.style.display = "flex";
+		banner.classList.add("resize-banner");
 	}
 
 }
