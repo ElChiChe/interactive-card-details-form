@@ -103,9 +103,12 @@ const confirmData = () => {
 
 }
 
-
 const format = s => {
-	return s.toString().replace(/\d{4}/g, "$&");
+	return ( 
+		s.replace(/\D/g, "")
+		.replace(/(\d{4})/g, "$1 ")
+		.trim()
+	)
 }
 
 const resetForm = () => {
